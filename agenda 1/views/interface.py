@@ -2,8 +2,8 @@ import customtkinter as ctk
 from tkinter import messagebox
 import sys
 import os
-caminho_projeto = os.path.abspath(os.path.dirname(__file__))
-caminho_data = os.path.join(caminho_projeto, "../data")
+caminho_projeto = os.path.abspath(os.path.dirname(__file__))# caminho do projeto
+caminho_data = os.path.join(caminho_projeto, "../data")   
 sys.path.append(caminho_data)
 from banco import Banco
 
