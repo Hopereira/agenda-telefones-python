@@ -4,8 +4,8 @@ import os
 
 class Banco:
     def __init__(self):
-        # Conectando ao banco de dados
-        self.conexao = sqlite3.connect(os.path.abspath("data/agenda.db"))
+        caminho_data = os.path.join(os.path.abspath(os.path.dirname(__file__)), "../data")
+        self.conexao = sqlite3.connect(os.path.join(caminho_data, "agenda.db"))
         self.cursor = self.conexao.cursor()
         self.criar_tabela()
 
